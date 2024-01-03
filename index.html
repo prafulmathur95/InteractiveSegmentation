@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Object Aware Contrastive Prior for Interactive Image Segmentation">
+  <meta name="keywords" content="Interactive Segmentation, Contrastive Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Object Aware Contrastive Prior for Interactive Image Segmentation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/WACV-Logo_2024-1024x243.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Object Aware Contrastive Prior for Interactive Image Segmentation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/prafulmathur95/">Praful Mathur</a>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/shashi-parwani-428aa424/">Shashi Kumar Parwani</a>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/mrinmoy-sen/">Mrinmoy Sen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/roopa-sheshadri-aa3a4113/">Roopa Sheshadri</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/aman-sharma-702049130/">Aman Sharma</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Samsung R&D Institute India - Bangalore</span>
+            
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/WACV2024/supplemental/Mathur_Object_Aware_Contrastive_WACV_2024_supplemental.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/WACV2024/supplemental/Mathur_Object_Aware_Contrastive_WACV_2024_supplemental.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero Architecture">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    	 <img src="./static/images/Architecture.jpg"
+                 class="Architecture-image"
+                 alt="Architecture image."/>
+      
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">(a) Object Aware Click Embeddings (OACE), (b) Proposed MSFNet Architecture for Interactive Segmentation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Interactive Image Segmentation is a process of separating
+			a user selected object from the background. This task
+			requires building an effective class-agnostic segmentation
+			model that performs well even on unseen categories. To
+			achieve good accuracy with limited training dataset, it is
+			important that the model has robust prior understanding of
+			features of similar class objects. The model should also
+			have good distinguishing capabilities of foreground objects
+			with the background. In this paper, we propose Object
+			Aware Click Embeddings (OACE) that represents user click
+			aware foreground object features. OACE is obtained based
+			on a prior network trained using the Contrastive Learning
+			paradigm. The single-click object selection accuracy of our
+			base interactive segmentation network is vastly improved
+			with the OACE input. Additionally, we propose a Multi-
+			Stage fusion approach to better utilize user click information.
+			With the proposed method, we outperform existing
+			state-of-the-art approaches by 21% on publicly available
+			test-sets for click-based Interactive Image Segmentation.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Results and Comparisons</h2>
+          <p>
+            Qualitative comparison of single-click segmentation accuracy of different interactive segmentation methods. The green dot on
+			each image denotes the user click location. Red arrows point to the erroneous regions. Note that proposed approach significantly improve the single click selection accuracy of objects in an image.
+          </p>
+          <img src="./static/images/results1.jpg"
+                 class="Result-image"
+                 alt="Result image."/>
+
+           <p>
+            Qualitative comparison of different interactive segmentation methods in terms of segmentation output for different user click
+            locations. The green dot on each image denotes the user click location. Note that conventional interactive segmentation methods have high variance in outputs when the click location is changed. The proposed method is robust towards different click locations and produce consistent outputs.
+          </p>
+          <img src="./static/images/robustness1.jpg"
+                 class="Result-image"
+                 alt="Result image."/>
+         <img src="./static/images/robustness2.jpg"
+         class="Result-image"
+         alt="Result image."/>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      
+    </div>
+    
+
+    <!-- Refrences. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+
+        <div class="content has-text-justified">
+          <p>
+             <a href="https://arxiv.org/abs/2304.02643">Segment Anything</a>
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2204.02574">FocalClick: Towards Practical Interactive Image Segmentation
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2102.06583">Reviving Iterative Training with Mask Guidance for Interactive Segmentation
+          </p> 
+          <p>
+             <a href="https://arxiv.org/abs/2001.10331">f-BRS: Rethinking Backpropagating Refinement for Interactive Segmentation</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/paper/Mathur_Object_Aware_Contrastive_Prior_for_Interactive_Image_Segmentation_WACV_2024_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <!-- <p>
+            This template has been borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> 
+            
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
